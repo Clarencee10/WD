@@ -161,7 +161,7 @@
             <div class="footer__column">
                 <h4 class="footer__title">Resources</h4>
                 <ul class="footer__list">
-                    <li><a href="{{ route('home') }}" class="footer__link">Home</a></li>
+                    <li><a href="{{ route('home') }}" class="footer__link">User</a></li>
                     <li><a href="{{ route('homepage') }}" class="footer__link">Home</a></li>
                     <li><a href="{{ route('content') }}" class="footer__link">Content</a></li>
                     <li><a href="{{ route('about') }}" class="footer__link">About</a></li>
