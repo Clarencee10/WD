@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controller;
 
 use Illuminate\Http\Request;
 
-class MyController extends Controller
+class Controller extends Controller
 {
     public function showEmailTemplate() 
     {

@@ -16,6 +16,8 @@
     background-color: var(--extra-light);
     font-family: Arial, sans-serif;
     margin: 0;
+    background-image: url(/images/ay.jpg);
+    background-size: 100%;
   }
   
   .container {

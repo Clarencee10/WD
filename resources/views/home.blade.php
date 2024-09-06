@@ -11,13 +11,21 @@
 <body>
     <div class="container">
         <h1>Enter your username to log in</h1>
-        <form action="{{ route('user') }}" method="get" class="login-form">
-            <input type="text" name="username" placeholder="Enter your username" class="form-input" pattern="[A-Za-z]+"
-                title="Please enter only alphabetic characters"> <button type="submit"
-                class="submit-btn">Submit</button>
-        </form>
-    </div>
+        <form action="/homepage" method="POST" class="login-form">
+            @csrf
+            <input type="text" name="username" placeholder="Enter your username" class="form-input"
+                value="{{ old('username') }}" pattern="[A-Za-z]+" title="Please enter only alphabetic characters">
 
+            @if ($errors->has('username'))
+                <div class="error-message">
+                    {{ $errors->first('username') }}
+                </div>
+            @endif
+            <button type="submit" name="login_type" value="user" class="submit-btn">Login</button>
+            <button type="submit" name="login_type" value="guest" class="submit-btn">Login as Guest</button>
+        </form>
+
+    </div>
 </body>
 
 </html>
