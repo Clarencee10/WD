@@ -22,12 +22,10 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--extra-light);
 }
 
-main {
-  flex: 1; /* Take up available space */
-}
-
+/* Navigation Styles */
 nav {
   width: 100%;
   position: fixed;
@@ -35,6 +33,7 @@ nav {
   left: 0;
   background-color: #ffffff;
   z-index: 99;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .nav__content {
@@ -50,7 +49,7 @@ nav .logo a {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-color);
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 nav .logo a:hover {
@@ -99,7 +98,7 @@ ul li a {
   text-decoration: none;
   font-weight: 600;
   color: var(--text-dark);
-  transition: 0.3s;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 ul li a:hover {
@@ -108,149 +107,110 @@ ul li a:hover {
   color: var(--secondary-color);
 }
 
-.welcome-message {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 20px;
+/* Contact Form Styles */
+h1 {
+  color: var(--text-dark);
+  margin-top: 7rem ;
+  margin-bottom: 2rem ;
+  text-align: center;
 }
 
-
-.section {
-  background-color: var(--extra-light);
-}
-
-.section__container {
-  min-height: 100vh;
-  max-width: var(--max-width);
+form.cf {
+  max-width: 600px;
   margin: auto;
+  margin-bottom: 2rem;
   padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  align-items: center;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.content {
+.half {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-.subtitle {
-  letter-spacing: 2px;
-  color: var(--text-light);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.title {
-  font-size: 2.5rem;
-  font-weight: 400;
-  line-height: 3rem;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-}
-
-.title span {
-  font-weight: 600;
-}
-
-.description {
-  text-align: center;
-  line-height: 1.5rem;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-}
-
-.action__btns {
-  display: flex;
   gap: 1rem;
 }
 
-.action__btns button {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding: 1rem 2rem;
-  outline: none;
+.left.cf {
+  margin-right: 1rem;
+}
+
+.right.cf {
+  margin-left: 1rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 0.75rem;
   border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  transition: 0.3s;
-  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.hire__me {
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  margin-top: 10px;
+  border-color: var(--primary-color-dark);
+  box-shadow: 0 0 5px var(--primary-color-dark);
+}
+
+textarea {
+  width: 100%;
+  height: 100px; /* Adjust this value as needed */
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding: 0.75rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  color: var(--text-dark);
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  resize: vertical; /* Allows vertical resizing; you can use 'none' to disable resizing */
+}
+
+textarea:focus {
+  border-color: var(--primary-color-dark);
+  box-shadow: 0 0 5px var(--primary-color-dark);
+}
+
+
+input[type="submit"] {
+  padding: 1rem ; /* Adjust padding to make the button larger */
+  border: none;
+  border-radius: 5px;
   background-color: var(--primary-color);
-  color: #ffffff;
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+  width: 25%;
+  
 }
 
-.hire__me:hover {
+input[type="submit"]:hover {
   background-color: var(--primary-color-dark);
 }
 
-.image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.image img {
-  width: min(25rem, 90%);
-  border-radius: 100%;
-}
-
-.image h2 {
-  margin-top: 1rem; /* Adjust the spacing as needed */
-  font-size: 1.25rem; /* Adjust the font size as needed */
-  text-align: center;
-  color: var(--text-dark); /* Ensure the text color matches your design */
-}
-
-@media (width < 750px) {
-  nav .checkbox {
-    display: block;
-  }
-
-  ul {
-    position: absolute;
-    width: 100%;
-    height: calc(100vh - 85px);
-    left: -100%;
-    top: 85px;
-    background-color: var(--extra-light);
-    flex-direction: column;
-    justify-content: center;
-    gap: 3rem;
-  }
-
-  nav #check:checked ~ ul {
-    left: 0;
-  }
-
-  ul li a {
-    font-size: 1.25rem;
-  }
-
-  .section__container {
-    padding: 10rem 1rem 5rem 1rem;
-    text-align: center;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
-  .image {
-    grid-area: 1/1/2/2;
-  }
-
-  .action__btns {
-    margin: auto;
-  }
-}
-
+/* Footer Styles */
 .footer {
   background-color: #fff8f8;
-  color: var(--text-dark); 
+  color: var(--text-dark);
   padding: 20px 0;
   font-family: 'Poppins', sans-serif;
+  border-top: 1px solid #e5e7eb;
 }
 
 .footer__container {
@@ -259,7 +219,7 @@ ul li a:hover {
   flex-wrap: wrap;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 1rem; 
+  padding: 1.5rem 1rem;
 }
 
 .footer__column {
@@ -271,12 +231,12 @@ ul li a:hover {
 .footer__logo {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--primary-color); 
+  color: var(--primary-color);
   transition: color 0.3s;
 }
 
 .footer__logo:hover {
-  color: var(--primary-color-dark); 
+  color: var(--primary-color-dark);
 }
 
 .footer__description {

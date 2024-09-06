@@ -105,6 +105,7 @@ ul li a:hover {
   color: var(--secondary-color);
 }
 
+/* Content Section */
 .content__section {
   background-color: var(--extra-light);
   padding: 3rem 1rem;
@@ -117,127 +118,157 @@ ul li a:hover {
 }
 
 .section__title {
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: var(--text-dark);
-    margin-bottom: 2rem;
-    margin-top: 4rem;
-    text-align: center;
-    position: relative;
-  }
-
-.section__title::after {
-    content: "";
-    display: block;
-    height: 4px;
-    width: 7%; 
-    background-color: var(--primary-color);
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%); 
-}
-
-.content__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.content__item {
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.content__item h3 {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--text-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+  text-align: center;
+  position: relative;
 }
 
-.content__item p {
-  color: var(--text-light);
+.section__title::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 7%;
+  background-color: var(--primary-color);
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Content Grid for Cards */
+.content__grid {
+  display: flex;
+  justify-content: space-around; 
+  gap: 20px;
+  padding: 2rem 0;
+  flex-wrap: wrap; 
+}
+
+/* Card */
+.card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 1300px; /* Adjust the max width of each card */
+}
+
+.card__image img {
+  width: 100%; /* Ensure the image fits the container */
+  height: auto;
+}
+
+.card__image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  height: 100%; /* Ensure the image height covers the card */
+}
+
+.card__description {
+  flex: 2;
+  padding: 20px;
+  color: var(--text-dark);
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center text vertically */
+}
+
+.card__description h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.card__description p {
+  font-size: 1rem;
   line-height: 1.5;
 }
 
+/* Footer */
 .footer {
-    background-color: #fff8f8;
-    color: var(--text-dark); 
-    padding: 20px 0;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  .footer__container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    padding: 1.5rem 1rem; 
-  }
-  
-  .footer__column {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
-  }
-  
-  .footer__logo {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--primary-color); 
-    transition: color 0.3s;
-  }
-  
-  .footer__logo:hover {
-    color: var(--primary-color-dark); 
-  }
-  
-  .footer__description {
-    margin: 10px 0;
-    line-height: 1.5;
-    color: var(--text-light);
-  }
-  
-  .footer__title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .footer__list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer__list li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .footer__list a {
-    color: var(--text-dark);
-    transition: color 0.3s;
-  }
-  
-  .footer__list a:hover {
-    color: var(--primary-color);
-  }
-  
-  .footer__contact-link {
-    color: var(--primary-color);
-  }
-  
-  .footer__contact-link:hover {
-    color: var(--primary-color-dark);
-  }
-  
-  .footer__bottom {
-    text-align: center;
-    padding: 1rem;
-    border-top: 1px solid #e5e7eb;
-  }
-  
+  background-color: #fff8f8;
+  color: var(--text-dark); 
+  padding: 20px 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1rem; 
+}
+
+.footer__column {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer__logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color); 
+  transition: color 0.3s;
+}
+
+.footer__logo:hover {
+  color: var(--primary-color-dark); 
+}
+
+.footer__description {
+  margin: 10px 0;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+.footer__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__list li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__list a {
+  color: var(--text-dark);
+  transition: color 0.3s;
+}
+
+.footer__list a:hover {
+  color: var(--primary-color);
+}
+
+.footer__contact-link {
+  color: var(--primary-color);
+}
+
+.footer__contact-link:hover {
+  color: var(--primary-color-dark);
+}
+
+.footer__bottom {
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
