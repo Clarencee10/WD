@@ -35,7 +35,7 @@
                         <div class="col-md-6">
                             <div class="banner_taital_main">
                                 <h1 class="banner_taital">coffee</h1>
-                                <h5 class="tasty_text">Tasty Of DozeCafe</h5>
+                                <h5 class="tasty_text">Tasty Of WebDev Cafe</h5>
                                 <p class="banner_text">more-or-less normal distribution of letters, as opposed
                                     to using</p>
                                 <div class="btn_main">
@@ -55,7 +55,7 @@
                         <div class="col-md-6">
                             <div class="banner_taital_main">
                                 <h1 class="banner_taital">coffee</h1>
-                                <h5 class="tasty_text">Tasty Of DozeCafe</h5>
+                                <h5 class="tasty_text">Tasty Of WebDev Cafe</h5>
                                 <p class="banner_text">more-or-less normal distribution of letters, as opposed
                                     to using</p>
                                 <div class="btn_main">
