@@ -1,44 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout') 
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <!-- Link to CSS stylesheets -->
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-</head>
-
-<body>
-    <nav>
-        <div class="nav__content">
-            <div class="logo">
-                <div class="logo"><a href="{{ route('home') }}">Web<b>Dev</b></a></div>
-            </div>
-            <label for="check" class="checkbox">
-                <i class="ri-menu-line"></i>
-            </label>
-            <input type="checkbox" name="check" id="check" />
-            <ul>
-                <li><a href="{{ route('home') }}">User</a></li>
-                <li><a href="{{ route('homepage', ['username' => $username]) }}">Home</a></li>
-                <li><a href="{{ route('about', ['username' => $username]) }}">About</a></li>
-                <li><a href="{{ route('content', ['username' => $username]) }}">Content</a></li>
-                <li><a href="{{ route('contactPage', ['username' => $username]) }}">Contact</a></li>
-            </ul>
-            <div class="links">
-                <a href="https://www.facebook.com/john.maneja.3154?mibextid=LQQJ4d"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/cla_rencee10/"><i class="fab fa-instagram"></i></a>
-                <a href="https://x.com/Cla_rencee10"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </nav>
+@section('content')
 
     <section id="home" class="home__section">
 
@@ -58,5 +20,4 @@
             </div>
         </div>
     </section>
-</body>
-</html>
+    @endsection 
